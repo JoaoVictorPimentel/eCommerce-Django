@@ -104,10 +104,10 @@
             <div class="cards">
                 <div class="card">
                     <div class="icon">
-                        <img class="img-produtos" src="{% static 'img/AJ5/AJ5-RacerBlue.webp' %}">
+                        <img class="img-produtos" src="{{tenis.imagem}}">
                     </div>
-                    <h3 class="nome-produto">ID: {{tenis.id}}</h3>
-                    <p class="preco-produto">ID: {{tenis.titulo}}</p>
+                    <h3 class="nome-produto">{{tenis.tenis}}</h3>
+                    <p class="preco-produto">{{tenis.valor}}</p>
                     <button class="ver-mais" type="submit"><a href="">Ver mais</a></button>
                 </div>
             </div>

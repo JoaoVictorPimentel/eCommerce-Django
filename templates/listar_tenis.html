@@ -88,7 +88,6 @@
                     </i>
                 </div>
                 <!-- Carrinho -->
-
             </div>
             <!-- Fim do carrinho e pesquisa -->
         </nav>
@@ -137,11 +136,11 @@
                 {% for tenis in listaTenis %}
                 <div class="card">
                     <div class="icon">
-                        <img class="img-produtos" src="{% static 'img/AJ5/AJ5-RacerBlue.webp' %}">
+                        <img class="img-produtos" src="{{tenis.imagem}}">
                     </div>
-                    <h3 class="nome-produto">{{tenis.id}}</h3>
-                    <p class="preco-produto">{{tenis.titulo}}</p>
-                    <button class="ver-mais" type="submit"><a href="">Ver mais</a></button>
+                    <h3 class="nome-produto">{{tenis.tenis}}</h3>
+                    <p class="preco-produto">{{tenis.valor}}</p>
+                    <button class="ver-mais" type="submit"><a href="http://localhost:8000/tenis/{{tenis.id}}">Ver mais</a></button>
                 </div>
                 {% endfor %}
             </div>
