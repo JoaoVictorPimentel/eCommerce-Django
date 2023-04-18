@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Cadastro de Filmes</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Salvar">
+</form>
+{% endblock %}
