@@ -1,4 +1,4 @@
 from django.contrib import admin
-from tenis.models import NovoTenis
+from tenis.models import Tenis
 
-admin.site.register(NovoTenis)
+admin.site.register(Tenis)

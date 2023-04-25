@@ -1,7 +1,7 @@
 from django import forms
-from tenis.models import NovoTenis
+from tenis.models import Tenis
 
 class TenisForm(forms.ModelForm):
     class Meta:
-        model = NovoTenis
+        model = Tenis
         fields = ('__all__')
