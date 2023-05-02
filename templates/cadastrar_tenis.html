@@ -2,10 +2,14 @@
 {% load static %}
 
 {% block content %}
-<h1>Cadastro de Filmes</h1>
+<h1>Cadastro de Tenis</h1>
 <form method="POST">
     {% csrf_token %}
-    {{form.as_p}}
+    <div class="form">
+        <input type="text" name="Nome" placeholder="Digite o nome do tênis">
+        <input type="text" name="Valor" placeholder="Digite o valor do tênis">
+        <input type="image">
+    </div>
     <input type="submit" value="Salvar">
 </form>
 {% endblock %}

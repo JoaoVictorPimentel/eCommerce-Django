@@ -8,7 +8,8 @@ def cadastrar_tenis(request):
         if form.is_valid():
             Tenis.objects.create(
                 nome = form.cleaned_data['nome'],
-                valor = form.cleaned_data['valor']
+                valor = form.cleaned_data['valor'],
+                imagem = form.cleaned_data['imagem']
         )
     else:
         form = TenisForm()
@@ -24,3 +25,10 @@ def listar_tenis(request):
 def detalhar_tenis(request, id):
     tenis = Tenis.objects.get(id=id)
     return render(request, 'detalhar_tenis.html', {'tenis': tenis})
+
+def cadastrar_tenis(request):
+    novoTenis = Tenis.objects.all()
+    context = {
+        'novoTenis': novoTenis 
+    }
+    return render(request, 'cadastrar_tenis.html', context)
